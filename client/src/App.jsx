@@ -1,12 +1,26 @@
 import React from "react";
+import Home from "./pages/Home";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import About from "./pages/About";
+
+import SignUp from "./pages/SignUp";
+import Project from "./pages/Project";
+import Signin from "./pages/SignIn";
+import DashBord from "./pages/DashBord"
 
 function App() {
   return (
-    <div>
-      <h1 className="text-3xl font-bold underline text-red-500">
-        Hello world!
-      </h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="about" element={<About />} />
+        <Route path="/SignIn" element={<Signin />} />
+        <Route path="/SignUP" element={<SignUp />} />
+        <Route path="/SignUP" element={<Project />} />
+        <Route path="/DashBord" element={<DashBord />} />
+        
+      </Routes>
+    </BrowserRouter>
   );
 }
 
